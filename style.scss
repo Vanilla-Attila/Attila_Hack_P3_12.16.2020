@@ -1,0 +1,66 @@
+@import 'utils/variables';
+@import 'components/components';
+
+
+$text-font: 'roboto', sans-serif;
+$logo-title-font: 'shrikhand', sans-serif;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $text-font;
+}
+h1 {
+    text-align: center;
+    font-family: $logo-title-font;
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+
+.div-input {
+    margin: 0;
+
+    .gps {
+        position: relative;
+        top: 32px;
+        left: 115px;
+    }
+
+        input {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            background: #e6e6e6;
+            text-decoration: none;
+            border: none;
+            box-shadow: 0px 4px 5px -5px grey inset;
+            font-weight: bold;
+        }
+}
+
+.header-box {
+    background: #f2f2f2;
+    h2 {
+        font-weight: bold;
+        text-align: center;
+        padding: 40px 0px;
+    }
+    p {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+}
+.btn-box {
+    text-align: center;
+    padding-bottom: 45px;
+    .btn {
+        @include button();
+    }
+}
