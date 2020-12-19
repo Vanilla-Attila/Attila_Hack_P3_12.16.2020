@@ -61,6 +61,93 @@ h1 {
     text-align: center;
     padding-bottom: 45px;
     .btn {
-        @include button();
+        @include button1();
+    }
+}
+
+.section-box {
+
+    margin: 40px 0;
+
+    h2 {
+        margin: 30px 20px; 
+     }
+    
+    .button-box2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        background: #f1f1f1;
+        border-radius: 20px;
+        border: 1px solid #fff;
+        width: 80%;
+        height: 70px;
+        margin-bottom: 20px;
+        box-shadow: $button-shadow;
+    }
+        .span-nums {
+            position: relative;
+            right: 17px;
+            float: left;
+            border: 1px solid black; 
+            color: #fff;
+            background: $colour-primary;
+            text-align: center;       
+            padding: 8px;
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+        }
+        .span-txt {
+            padding-left: 20px;
+            font-weight: bold;
+        }
+}
+
+main {
+    
+    background: #f2f2f2;
+    
+    h2 {
+        padding: 30px 20px;
+    }
+    .img-positioning {
+        width: 90%;
+    
+    }
+    .img-box {
+        display: flex;
+        justify-content: center;
+    }
+    img {
+        image-rendering: pixelated;
+        object-fit: cover;
+        height: 300px;
+        width: 100%;
+        border-radius: 12px 12px 0 0;
+    }
+    .polaroid {
+        background: #fff;
+        margin-bottom: 40px;
+        border-radius: 12px;
+        box-shadow: $button-shadow;
+    }
+    .under-img {
+        padding: 20px 30px;
+        text-align: left;
+        line-height: 1.6;
+        span {
+            font-weight: bold;
+        }
+        i {
+            float: right;
+            padding-top: 15px;
+        }
     }
 }
