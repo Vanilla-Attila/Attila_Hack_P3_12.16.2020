@@ -141,4 +141,18 @@ main .under-img i {
   padding-top: 15px;
 }
 
+footer {
+  background: #383838;
+  color: #fff;
+  padding: 20px;
+  line-height: 2.2;
+}
+footer h3 {
+  font-family: "shrikhand", sans-serif;
+  padding-bottom: 15px;
+}
+footer i {
+  margin-right: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
