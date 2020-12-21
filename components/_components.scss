@@ -6,4 +6,13 @@
     color: #fff;
     border: none;
     box-shadow: $button-shadow;
+    &:hover {
+        box-shadow: $hover-shadow;
+    }
+}
+
+@mixin h1() {
+    text-align: center;
+    font-family: $logo-title-font;
+    padding: 20px;
 }

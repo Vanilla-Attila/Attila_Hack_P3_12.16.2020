@@ -17,31 +17,25 @@ body {
     font-family: $text-font;
 }
 h1 {
-    text-align: center;
-    font-family: $logo-title-font;
-    padding: 20px;
-    padding-bottom: 0;
+    @include h1();
 }
 
 
-.div-input {
+.div-gps {
     margin: 0;
-
-    .gps {
-        position: relative;
-        top: 32px;
-        left: 115px;
-    }
-
-        input {
-            height: 50px;
-            width: 100%;
-            text-align: center;
-            background: #e6e6e6;
-            text-decoration: none;
-            border: none;
-            box-shadow: 0px 4px 5px -5px grey inset;
+    text-align: center;
+    background: #e6e6e6;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0px 4px 5px -5px grey inset;
+    
+       .gps-text { 
             font-weight: bold;
+            padding-top: 14px;
+        }
+
+        .gps {
+            padding-right: 8px;
         }
 }
 
@@ -90,6 +84,10 @@ h1 {
         height: 70px;
         margin-bottom: 20px;
         box-shadow: $button-shadow;
+        &:hover {
+            background: $colour-primary;
+            box-shadow: $hover-shadow;
+        }
     }
         .span-nums {
             position: relative;
@@ -124,6 +122,7 @@ main {
     .img-box {
         display: flex;
         justify-content: center;
+        margin-top: -50px;
     }
     img {
         image-rendering: pixelated;
@@ -137,6 +136,25 @@ main {
         margin-bottom: 40px;
         border-radius: 12px;
         box-shadow: $button-shadow;
+        &:hover {
+            box-shadow: $hover-shadow;
+        }
+    }
+    .new-txt {
+        position: relative;
+        top: 35px;    
+        left: 69%;
+        width: max-content;
+        padding: 5px 20px;
+        background: $colour-tertiary;
+    }
+    .new-txt2 {
+        position: relative;
+        top: 440px;
+        left: 69%;
+        width: max-content;
+        padding: 5px 20px;
+        background: $colour-tertiary;
     }
     .under-img {
         padding: 20px 30px;
@@ -148,6 +166,19 @@ main {
         i {
             float: right;
             padding-top: 15px;
+            &:hover {
+                color: $colour-primary;
+            }
+        }
+        .full {
+            position: relative;
+            left: 24px;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                color: $colour-primary;                
+            }
+
         }
     }
 }
@@ -155,8 +186,8 @@ main {
 footer {
     background: #383838;
     color: #fff;
-    padding: 20px;
-    line-height: 2.2;
+    padding: 20px 35px;
+    line-height: 2;
     h3 {
        font-family: $logo-title-font;
        padding-bottom: 15px; 
