@@ -22,177 +22,106 @@ h1 {
 
 
 .div-gps {
-    margin: 0;
-    text-align: center;
-    background: #e6e6e6;
-    height: 50px;
-    width: 100%;
-    box-shadow: 0px 4px 5px -5px grey inset;
-    
-       .gps-text { 
-            font-weight: bold;
-            padding-top: 14px;
-        }
-
-        .gps {
-            padding-right: 8px;
-        }
+    @include gps-title();
 }
 
 .header-box {
-    background: #f2f2f2;
-    h2 {
-        font-weight: bold;
-        text-align: center;
-        padding: 40px 0px;
-    }
-    p {
-        text-align: center;
-        padding-bottom: 40px;
-    }
-}
-.btn-box {
-    text-align: center;
-    padding-bottom: 45px;
-    .btn {
-        @include button1();
-    }
+    @include header();
 }
 
 .section-box {
-
-    margin: 40px 0;
-
-    h2 {
-        margin: 30px 20px; 
-     }
-    
-    .button-box2 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    button {
-        display: flex;
-        align-items: center;
-        font-weight: bold;
-        background: #f1f1f1;
-        border-radius: 20px;
-        border: 1px solid #fff;
-        width: 80%;
-        height: 70px;
-        margin-bottom: 20px;
-        box-shadow: $button-shadow;
-        &:hover {
-            background: $colour-primary;
-            box-shadow: $hover-shadow;
-        }
-    }
-        .span-nums {
-            position: relative;
-            right: 17px;
-            float: left;
-            border: 1px solid black; 
-            color: #fff;
-            background: $colour-primary;
-            text-align: center;       
-            padding: 8px;
-            height: 30px;
-            width: 30px;
-            border-radius: 50%;
-        }
-        .span-txt {
-            padding-left: 20px;
-            font-weight: bold;
-        }
+    @include section();
 }
 
 main {
-    
-    background: #f2f2f2;
-    
-    h2 {
-        padding: 30px 20px;
-    }
-    .img-positioning {
-        width: 90%;
-    
-    }
-    .img-box {
-        display: flex;
-        justify-content: center;
-        margin-top: -50px;
-    }
-    img {
-        image-rendering: pixelated;
-        object-fit: cover;
-        height: 300px;
-        width: 100%;
-        border-radius: 12px 12px 0 0;
-    }
-    .polaroid {
-        background: #fff;
-        margin-bottom: 40px;
-        border-radius: 12px;
-        box-shadow: $button-shadow;
-        &:hover {
-            box-shadow: $hover-shadow;
-        }
-    }
-    .new-txt {
-        position: relative;
-        top: 35px;    
-        left: 69%;
-        width: max-content;
-        padding: 5px 20px;
-        background: $colour-tertiary;
-    }
-    .new-txt2 {
-        position: relative;
-        top: 440px;
-        left: 69%;
-        width: max-content;
-        padding: 5px 20px;
-        background: $colour-tertiary;
-    }
-    .under-img {
-        padding: 20px 30px;
-        text-align: left;
-        line-height: 1.6;
-        span {
-            font-weight: bold;
-        }
-        i {
-            float: right;
-            padding-top: 15px;
-            &:hover {
-                color: $colour-primary;
-            }
-        }
-        .full {
-            position: relative;
-            left: 24px;
-            opacity: 0;
-            &:hover {
-                opacity: 1;
-                color: $colour-primary;                
-            }
-
-        }
-    }
+    @include main();
 }
 
 footer {
-    background: #383838;
-    color: #fff;
-    padding: 20px 35px;
-    line-height: 2;
-    h3 {
-       font-family: $logo-title-font;
-       padding-bottom: 15px; 
+    @include footer();
+}
+
+
+
+.arrow {
+    position: relative;
+    left: 30px;
+    top: 32px;
+}
+.h1-menu {
+    padding-top: 0;
+}
+
+.img-menu {
+    position: relative;
+    image-rendering: pixelated;
+    object-fit: cover;
+    height: 350px;
+    width: 100%;
+}
+.main-menu {
+    position: relative;
+    bottom: 27px;
+    padding: 30px 15px;
+    background: #f2f2f2;
+    border-radius: 26px 26px 0 0;
+    .h2-menu {
+        font-family: $logo-title-font;
     }
     i {
-        margin-right: 5px;
+        float: right;
+        padding-top: 5px;
+        padding-right: 10px;
+        &:hover {
+           opacity: 0;
+           color: $colour-primary;
+        }
+    }
+    .full {
+        position: relative;
+        left: 46px;
+        bottom: 0.8px;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            color: $colour-primary;                
+        }
+    }
+    .type-of-dish {
+        font-weight: normal;
+        padding-top: 30px;        
+        &::after {
+            content: "";  
+            display: block;
+            width: 12%;
+            padding-top: 3px;
+            border-bottom: 3px solid $colour-tertiary;
+        }               
+    }
+
+    .dishes {
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: $button-shadow;
+        padding: 10px;
+        line-height: 1.6;
+        .dish-and-price {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            p {
+                width: 90%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .euro {
+                padding-right: 10px;
+            }
+        }
+    }
+    .btn-box {
+        margin-top: 50px;
     }
 }
