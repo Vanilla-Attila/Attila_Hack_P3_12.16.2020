@@ -41,7 +41,13 @@ footer {
     @include footer();
 }
 
+.body-menu {
+    background: #f2f2f2;
+}
 
+.header-menu {
+    background: #fff;
+}
 
 .arrow {
     position: relative;
@@ -93,7 +99,7 @@ footer {
         &::after {
             content: "";  
             display: block;
-            width: 12%;
+            width: 40px;
             padding-top: 3px;
             border-bottom: 3px solid $colour-tertiary;
         }               
@@ -123,5 +129,6 @@ footer {
     }
     .btn-box {
         margin-top: 50px;
+        margin-bottom: -40px;
     }
 }
