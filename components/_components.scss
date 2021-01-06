@@ -236,7 +236,7 @@
     .h2-menu {
         font-family: $logo-title-font;
     }
-    i {
+    .heart {
         float: right;
         padding-top: 5px;
         padding-right: 10px;
@@ -274,6 +274,34 @@
         box-shadow: $button-shadow;
         padding: 10px;
         line-height: 1.6;
+        &:hover .tick-icon {
+            display: initial;
+            animation-name: icon-move;
+            animation-timing-function: linear; 
+            animation-duration: 2s;
+        }
+        &:hover .tick {
+            // display: initial;
+            animation-name: icon-rotate; 
+            animation-duration: 2s;
+        }
+        .tick-icon {
+            background: #99E2D0;
+            text-align: center;
+            float: right;
+            position: relative;
+            padding: 24px;
+            bottom: 11px;
+            left: 10px;
+            border-radius: 0px 18px 18px 0px;
+            display: none;
+           
+            .tick {
+                background: $colour-tertiary;
+                color: #fff;
+            }
+           
+        }
         .dish-and-price {
             display: flex;
             flex-direction: row;
@@ -285,7 +313,33 @@
                 text-overflow: ellipsis;
             }
             .euro {
-                padding-right: 10px;
+                padding-right: 10px; 
+            }
+        }
+        @keyframes icon-move {
+            0% {
+                opacity: 0;
+                transform: translateX(82px); 
+            } 
+            50% {
+                transform: translateX(10px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes icon-rotate {
+            0% {
+                opacity: 0;
+                transform: rotate(0deg);
+            } 
+            50% {
+                transform: rotate(-180deg);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(-360deg);
             }
         }
     }

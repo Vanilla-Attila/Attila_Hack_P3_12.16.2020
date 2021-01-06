@@ -229,12 +229,12 @@ footer i {
 .main-menu .h2-menu {
   font-family: "shrikhand", sans-serif;
 }
-.main-menu i {
+.main-menu .heart {
   float: right;
   padding-top: 5px;
   padding-right: 10px;
 }
-.main-menu i:hover {
+.main-menu .heart:hover {
   opacity: 0;
   color: #9356dc;
 }
@@ -267,6 +267,31 @@ footer i {
   padding: 10px;
   line-height: 1.6;
 }
+.main-menu .dishes:hover .tick-icon {
+  display: initial;
+  animation-name: icon-move;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+}
+.main-menu .dishes:hover .tick {
+  animation-name: icon-rotate;
+  animation-duration: 2s;
+}
+.main-menu .dishes .tick-icon {
+  background: #99E2D0;
+  text-align: center;
+  float: right;
+  position: relative;
+  padding: 24px;
+  bottom: 11px;
+  left: 10px;
+  border-radius: 0px 18px 18px 0px;
+  display: none;
+}
+.main-menu .dishes .tick-icon .tick {
+  background: #99E2D0;
+  color: #fff;
+}
 .main-menu .dishes .dish-and-price {
   display: flex;
   flex-direction: row;
@@ -280,6 +305,32 @@ footer i {
 }
 .main-menu .dishes .dish-and-price .euro {
   padding-right: 10px;
+}
+@keyframes icon-move {
+  0% {
+    opacity: 0;
+    transform: translateX(82px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes icon-rotate {
+  0% {
+    opacity: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
 }
 .main-menu .btn-box {
   margin-top: 50px;
@@ -313,6 +364,18 @@ footer i {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  .new-txt {
+    position: relative;
+    left: 81%;
+  }
+
+  .new-txt {
+    position: relative;
+    left: 81%;
   }
 }
 
