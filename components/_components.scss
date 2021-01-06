@@ -199,3 +199,134 @@
         margin-right: 5px;
     }
 }
+
+@mixin body-color() {
+        background: #f2f2f2;
+}
+
+@mixin header-color() {
+        background: #fff;
+}
+
+@mixin back-arrow() {
+    position: relative;
+    left: 30px;
+    top: 32px;
+}
+
+@mixin h1-menu() {
+    padding-top: 0;
+}
+
+@mixin img-menu() {
+    position: relative;
+    image-rendering: pixelated;
+    object-fit: cover;
+    height: 350px;
+    width: 100%;
+}
+@mixin main-menu() {
+   
+
+    position: relative;
+    bottom: 27px;
+    padding: 30px 15px;
+    background: #f2f2f2;
+    border-radius: 26px 26px 0 0;
+    .h2-menu {
+        font-family: $logo-title-font;
+    }
+    i {
+        float: right;
+        padding-top: 5px;
+        padding-right: 10px;
+        &:hover {
+           opacity: 0;
+           color: $colour-primary;
+        }
+    }
+    .full {
+        position: relative;
+        left: 46px;
+        bottom: 0.8px;
+        opacity: 0;
+        &:hover {
+            opacity: 1;
+            color: $colour-primary;                
+        }
+    }
+    .type-of-dish {
+        font-weight: normal;
+        padding-top: 30px;        
+        &::after {
+            content: "";  
+            display: block;
+            width: 40px;
+            padding-top: 3px;
+            border-bottom: 3px solid $colour-tertiary;
+        }               
+    }
+
+    .dishes {
+        margin: 20px 0;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: $button-shadow;
+        padding: 10px;
+        line-height: 1.6;
+        .dish-and-price {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            p {
+                width: 90%;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .euro {
+                padding-right: 10px;
+            }
+        }
+    }
+    .btn-box {
+        margin-top: 50px;
+        margin-bottom: -40px;
+    }
+}
+
+@mixin dropdown-animation() {
+    .a {
+        animation-name: dropdown-menu;
+        animation-duration: 2s;       
+    }
+    .b {
+        animation-name: dropdown-menu;
+        animation-duration: 3s;
+        }
+    .c {
+        animation-name: dropdown-menu;
+        animation-duration: 4s;
+        }
+    .d {
+        animation-name: dropdown-menu;
+        animation-duration: 5s;   
+    }
+    @keyframes dropdown-menu {
+        0% {
+            opacity: 0;
+            transform: translateY(-500px);
+        }
+        80% {
+            opacity: 0.5;
+            transform: translateY(20px);
+        }
+    
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+    

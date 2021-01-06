@@ -193,12 +193,12 @@ footer i {
   margin-right: 5px;
 }
 
-.body-menu {
-  background: #f2f2f2;
-}
-
 .header-menu {
   background: #fff;
+}
+
+.body-menu {
+  background: #f2f2f2;
 }
 
 .arrow {
@@ -284,6 +284,36 @@ footer i {
 .main-menu .btn-box {
   margin-top: 50px;
   margin-bottom: -40px;
+}
+.main-menu .a {
+  animation-name: dropdown-menu;
+  animation-duration: 2s;
+}
+.main-menu .b {
+  animation-name: dropdown-menu;
+  animation-duration: 3s;
+}
+.main-menu .c {
+  animation-name: dropdown-menu;
+  animation-duration: 4s;
+}
+.main-menu .d {
+  animation-name: dropdown-menu;
+  animation-duration: 5s;
+}
+@keyframes dropdown-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
