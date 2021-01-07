@@ -36,7 +36,7 @@ footer {
     @include footer();
 }
 
-.header-menu {
+.body-menu__header-menu {
     @include header-color();
 }
 
@@ -53,7 +53,7 @@ footer {
    @include h1-menu();
 }
 
-.img-menu {
+.body-menu__img-menu {
     @include img-menu();
 }
 .main-menu {

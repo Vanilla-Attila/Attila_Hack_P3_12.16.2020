@@ -1,8 +1,8 @@
-.btn-box {
+.header-box__btn-box {
   text-align: center;
   padding-bottom: 45px;
 }
-.btn-box .btn {
+.header-box__btn-box__btn {
   height: 50px;
   width: 200px;
   border-radius: 36px;
@@ -11,7 +11,7 @@
   border: none;
   box-shadow: 0px 3px 5px 2px #D0D0D0;
 }
-.btn-box .btn:hover {
+.header-box__btn-box__btn:hover {
   box-shadow: 0px 3px 5px 2px #A0A0A0;
 }
 
@@ -39,7 +39,7 @@ h1 {
   width: 100%;
   box-shadow: 0px 4px 5px -5px grey inset;
 }
-.div-gps .gps-text {
+.div-gps .div-gps__gps-text {
   font-weight: bold;
   padding-top: 14px;
 }
@@ -66,7 +66,7 @@ h1 {
 .section-box h2 {
   margin: 30px 20px;
 }
-.section-box .button-box2 {
+.section-box .section-box__button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,13 +129,13 @@ main img {
   width: 100%;
   border-radius: 12px 12px 0 0;
 }
-main .polaroid {
+main .img-positioning__polaroid {
   background: #fff;
   margin-bottom: 40px;
   border-radius: 12px;
   box-shadow: 0px 3px 5px 2px #D0D0D0;
 }
-main .polaroid:hover {
+main .img-positioning__polaroid:hover {
   box-shadow: 0px 3px 5px 2px #A0A0A0;
 }
 main .new-txt {
@@ -154,27 +154,27 @@ main .new-txt2 {
   padding: 5px 20px;
   background: #99E2D0;
 }
-main .under-img {
+main .img-positioning__polaroid__under-img {
   padding: 20px 30px;
   text-align: left;
   line-height: 1.6;
 }
-main .under-img span {
+main .img-positioning__polaroid__under-img span {
   font-weight: bold;
 }
-main .under-img i {
+main .img-positioning__polaroid__under-img i {
   float: right;
   padding-top: 15px;
 }
-main .under-img i:hover {
+main .img-positioning__polaroid__under-img i:hover {
   color: #9356dc;
 }
-main .under-img .full {
+main .img-positioning__polaroid__under-img .full {
   position: relative;
   left: 24px;
   opacity: 0;
 }
-main .under-img .full:hover {
+main .img-positioning__polaroid__under-img .full:hover {
   opacity: 1;
   color: linear-gradient(to bottom right, #ff79da, #9356dc);
 }
@@ -193,7 +193,7 @@ footer i {
   margin-right: 5px;
 }
 
-.header-menu {
+.body-menu__header-menu {
   background: #fff;
 }
 
@@ -211,7 +211,7 @@ footer i {
   padding-top: 0;
 }
 
-.img-menu {
+.body-menu__img-menu {
   position: relative;
   image-rendering: pixelated;
   object-fit: cover;
@@ -332,7 +332,7 @@ footer i {
     transform: rotate(-360deg);
   }
 }
-.main-menu .btn-box {
+.main-menu .header-box__btn-box {
   margin-top: 50px;
   margin-bottom: -40px;
 }
