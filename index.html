@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,89 +8,112 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./images/logo/ohmyfood@2x.svg">
     <title>ohmyfood</title>
 </head>
+
 <body>
-    
+
     <h1>ohmyfood</h1>
-    
-    <div class="div-gps">        
+
+    <div class="div-gps">
         <p class="div-gps__gps-text"><i class="fas fa-map-marker-alt gps"></i>Paris, Belleville</p>
     </div>
     <header class="header-box">
         <h2>Book the menu you like</h2>
-        
+
         <p>Discover top-of-the-art restaurants we<br>
-        picked for you</p>
+            picked for you</p>
         <a href="#restaurants">
-        <div class="header-box__btn-box">
-            <button class="header-box__btn-box__btn">Explore our restaurants</button>
-        </div>
+            <div class="header-box__btn-box">
+                <button class="header-box__btn-box__btn">Explore our restaurants</button>
+            </div>
         </a>
     </header>
 
     <section class="section-box">
         <h2>How it works</h2>
         <div class="section-box__button-box">
-        <a href="#restaurants">
-        <button><span class="span-nums">1</span><i class="fas fa-mobile-alt fa-lg"></i><span class="span-txt"></span> Chose a restaurant</button></a>
-        <a href="#restaurants">
-        <button><span class="span-nums">2</span><i class="fas fa-list-ul fa-lg"></i><span class="span-txt"></span> Create your menu</button></a>
-        <a href="#restaurants">
-        <button><span class="span-nums">3</span><i class="fas fa-utensils fa-lg"></i><span class="span-txt"></span> Go enjoy it at the restaurant</button></a>
+            <a href="#restaurants">
+                <button class="button first"><span class="span-nums">1</span><i class="fas fa-mobile-alt fa-lg"></i><span
+                        class="span-txt"></span> Chose a restaurant</button></a>
+            <a href="#restaurants">
+                <button class="button second"><span class="span-nums">2</span><i class="fas fa-list-ul fa-lg"></i><span
+                        class="span-txt"></span> Create your menu</button></a>
+            <a href="#restaurants">
+                <button class="button third"><span class="span-nums">3</span><i class="fas fa-utensils fa-lg"></i><span
+                        class="span-txt"></span> Go enjoy it at the restaurant</button></a>
         </div>
-   </section>
-   <main>
-       <h2 id="restaurants">Restaurants</h2>
-       <p class="new-txt">New</p>
-       <p class="new-txt2">New</p>
-       <div class="img-box">        
-           <div class="img-positioning">
-               <a href="./menu-lapalette.html">           
-                <div class="img-positioning__polaroid">                           
-                    <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant dish">
-                <div class="img-positioning__polaroid__under-img">                    
-                    <p><span>The Full Palette</span><i class="far fa-heart fa-lg empty"></i><i class="fas fa-heart fa-lg full"></i><br>New York</p>
-                </div>    
-                </div> 
-               </a>
-               <a href="./menu-lanote-ench.html">
-                <div class="img-positioning__polaroid">                    
-                    <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant dish">
-                <div class="img-positioning__polaroid__under-img">
-                    <p><span>The Enchanted Plate</span><i class="far fa-heart fa-lg empty"></i><i class="fas fa-heart fa-lg full"></i><br>New York</p>
-                </div>    
-                </div>
+    </section>
+    <main>
+        <h2 id="restaurants">Restaurants</h2>
+        
+        
+       
+        <div class="img-box">
+            
+            <div class="img-positioning">
+                <a class="img-positioning__first" href="./menu-lapalette.html">
+                    <div class="img-positioning__polaroid">
+                        <div class="new-text-box">
+                        <img src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant dish">
+                      
+                            <p class="new-text-box__new-txt">New</p>
+                            </div>
+                        <div class="img-positioning__polaroid__under-img">
+                            <p><span>The Full Palette</span><i class="far fa-heart fa-lg empty"></i><i
+                                    class="fas fa-heart fa-lg full"></i><br>New York</p>
+                        </div>
+                       
+                    </div>
                 </a>
-                <a href="./menu-ala-franc.html">
-                <div class="img-positioning__polaroid">
-                    <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant dish">
-                <div class="img-positioning__polaroid__under-img">
-                    <p><span>Bastille</span><i class="far fa-heart fa-lg empty"></i><i class="fas fa-heart fa-lg full"></i><br>New York</p>
-                </div>    
-                </div>
+               
+                <a class="img-positioning__second" href="./menu-lanote-ench.html">
+                    <div class="img-positioning__polaroid">
+                        <div class="new-text-box2">
+                        <img src="./images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant dish">
+                        
+                            <p class="new-text-box2__new-txt2">New</p>
+                            </div>
+                        <div class="img-positioning__polaroid__under-img">
+                            <p><span>The Enchanted Plate</span><i class="far fa-heart fa-lg empty"></i><i
+                                    class="fas fa-heart fa-lg full"></i><br>New York</p>
+                        </div>
+                        
+                    </div>
                 </a>
-                <a href="./menu-ladelicedes.html">
-                <div class="img-positioning__polaroid">
-                    <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant dish">
-                <div class="img-positioning__polaroid__under-img">
-                    <p><span>Le Gourmand</span><i class="far fa-heart fa-lg empty"></i><i class="fas fa-heart fa-lg full"></i><br>New York</p>
-                </div>    
-                </div>
+                <a class="img-positioning__third" href="./menu-ala-franc.html">
+                    <div class="img-positioning__polaroid">
+                        <img src="./images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant dish">
+                        <div class="img-positioning__polaroid__under-img">
+                            <p><span>Bastille</span><i class="far fa-heart fa-lg empty"></i><i
+                                    class="fas fa-heart fa-lg full"></i><br>New York</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="img-positioning__fourth" href="./menu-ladelicedes.html">
+                    <div class="img-positioning__polaroid">
+                        <img src="./images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="restaurant dish">
+                        <div class="img-positioning__polaroid__under-img">
+                            <p><span>Le Gourmand</span><i class="far fa-heart fa-lg empty"></i><i
+                                    class="fas fa-heart fa-lg full"></i><br>New York</p>
+                        </div>
+                    </div>
                 </a>
             </div>
         </div>
-   </main> 
-   <footer>
-      <h3>ohmyfood</h3>
-      <div><i class="fas fa-utensils"></i> Suggest a Restaurant</div> 
-      <div><i class="fas fa-handshake"></i> Become a partner</div>
-      <div>Legal</div>
-      <div>Contact</div>
-    </footer>  
+    
+    </main>
+    <footer>
+        <h3>ohmyfood</h3>
+        <div><i class="fas fa-utensils"></i> Suggest a Restaurant</div>
+        <div><i class="fas fa-handshake"></i> Become a partner</div>
+        <div>Legal</div>
+        <div>Contact</div>
+    </footer>
 </body>
-</html>
 
+</html>

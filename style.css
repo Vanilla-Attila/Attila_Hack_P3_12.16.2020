@@ -74,7 +74,14 @@ h1 {
 .section-box a {
   width: 85%;
 }
-.section-box button {
+@media screen and (min-width: 601px) {
+  .section-box a {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+  }
+}
+.section-box .button {
   display: flex;
   align-items: center;
   font-weight: bold;
@@ -86,9 +93,19 @@ h1 {
   margin-bottom: 20px;
   box-shadow: 0px 3px 5px 2px #D0D0D0;
 }
-.section-box button:hover {
+.section-box .button:hover {
   background: #e4d5f6;
   box-shadow: 0px 3px 5px 2px #A0A0A0;
+}
+@media screen and (min-width: 601px) {
+  .section-box .button .first {
+    float: left;
+  }
+}
+@media screen and (min-width: 601px) {
+  .section-box .button .second {
+    float: right;
+  }
 }
 .section-box .span-nums {
   position: relative;
@@ -115,12 +132,41 @@ main h2 {
   padding: 30px 20px;
 }
 main .img-positioning {
-  width: 90%;
-}
-main .img-box {
+  padding: 0 20px;
   display: flex;
-  justify-content: center;
-  margin-top: -50px;
+  flex-direction: column;
+}
+@media screen and (min-width: 1024px) {
+  main .img-positioning {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+main .img-positioning__first {
+  flex: 1;
+  flex-basis: 40%;
+}
+@media screen and (min-width: 1024px) {
+  main .img-positioning__first {
+    padding-right: 20px;
+  }
+}
+main .img-positioning__second {
+  flex: 1;
+  flex-basis: 40%;
+}
+main .img-positioning__third {
+  flex: 1;
+  flex-basis: 40%;
+}
+@media screen and (min-width: 1024px) {
+  main .img-positioning__third {
+    padding-right: 20px;
+  }
+}
+main .img-positioning__fourth {
+  flex: 1;
+  flex-basis: 40%;
 }
 main img {
   image-rendering: pixelated;
@@ -138,21 +184,37 @@ main .img-positioning__polaroid {
 main .img-positioning__polaroid:hover {
   box-shadow: 0px 3px 5px 2px #A0A0A0;
 }
-main .new-txt {
+main .new-text-box {
   position: relative;
-  top: 35px;
-  left: 69%;
+}
+main .new-text-box .new-text-box__new-txt {
+  position: absolute;
+  top: 25px;
+  left: 70%;
   width: max-content;
   padding: 5px 20px;
   background: #99E2D0;
 }
-main .new-txt2 {
+@media screen and (min-width: 601px) {
+  main .new-text-box .new-text-box__new-txt {
+    left: 80%;
+  }
+}
+main .new-text-box2 {
   position: relative;
-  top: 440px;
-  left: 69%;
+}
+main .new-text-box2 .new-text-box2__new-txt2 {
+  position: absolute;
+  top: 25px;
+  left: 70%;
   width: max-content;
   padding: 5px 20px;
   background: #99E2D0;
+}
+@media screen and (min-width: 601px) {
+  main .new-text-box2 .new-text-box2__new-txt2 {
+    left: 80%;
+  }
 }
 main .img-positioning__polaroid__under-img {
   padding: 20px 30px;
@@ -165,8 +227,10 @@ main .img-positioning__polaroid__under-img span {
 main .img-positioning__polaroid__under-img i {
   float: right;
   padding-top: 15px;
+  opacity: 1;
 }
 main .img-positioning__polaroid__under-img i:hover {
+  opacity: 0;
   color: #9356dc;
 }
 main .img-positioning__polaroid__under-img .full {
@@ -364,18 +428,6 @@ footer i {
   100% {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@media only screen and (min-width: 601px) {
-  .new-txt {
-    position: relative;
-    left: 81%;
-  }
-
-  .new-txt {
-    position: relative;
-    left: 81%;
   }
 }
 

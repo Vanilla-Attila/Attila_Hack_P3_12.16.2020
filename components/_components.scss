@@ -71,9 +71,15 @@
 
     a {
         width: 85%;
+        @include breakpoint(medium) {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+        }
+        
     }
 
-    button {
+    .button {
         display: flex;
         align-items: center;
         font-weight: bold;
@@ -87,6 +93,16 @@
         &:hover {
             background: lighten($colour-primary, 30%);
             box-shadow: $hover-shadow;
+        }
+        .first {
+            @include breakpoint(medium) {
+                float: left;
+            }
+        }
+        .second {
+            @include breakpoint(medium) {
+                float: right;
+            }
         }
     }
         .span-nums {
@@ -115,14 +131,42 @@
     h2 {
         padding: 30px 20px;
     }
+    
+    
+    // .img-box {
+       
+    // }
     .img-positioning {
-        width: 90%;
+        padding: 0 20px;
+        display: flex;
+        flex-direction: column;
+        @include breakpoint(large) {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     
     }
-    .img-box {
-        display: flex;
-        justify-content: center;
-        margin-top: -50px;
+    .img-positioning__first {
+        flex: 1;
+        flex-basis: 40%;
+        @include breakpoint(large) {
+           padding-right: 20px;
+        }
+    }
+    .img-positioning__second {
+        flex: 1;
+        flex-basis: 40%;
+    }
+    .img-positioning__third {
+        flex: 1;
+        flex-basis: 40%;
+        @include breakpoint(large) {
+            padding-right: 20px;
+         }
+    }
+    .img-positioning__fourth {
+        flex: 1;
+        flex-basis: 40%;
     }
     img {
         image-rendering: pixelated;
@@ -140,21 +184,34 @@
             box-shadow: $hover-shadow;
         }
     }
-    .new-txt {
+    .new-text-box {
         position: relative;
-        top: 35px;    
-        left: 69%;
-        width: max-content;
-        padding: 5px 20px;
-        background: $colour-tertiary;
+        .new-text-box__new-txt {
+            position: absolute;
+            top: 25px;
+            left: 70%;
+            width: max-content;
+            padding: 5px 20px;
+            background: $colour-tertiary;
+            @include breakpoint(medium) {
+                left: 80%;
+            }
+        }
     }
-    .new-txt2 {
+
+    .new-text-box2 {
         position: relative;
-        top: 440px;
-        left: 69%;
-        width: max-content;
-        padding: 5px 20px;
-        background: $colour-tertiary;
+        .new-text-box2__new-txt2 {
+            position: absolute;
+            top: 25px;
+            left: 70%;
+            width: max-content;
+            padding: 5px 20px;
+            background: $colour-tertiary;
+            @include breakpoint(medium) {
+                left: 80%;
+            }
+        }
     }
     .img-positioning__polaroid__under-img {
         padding: 20px 30px;
@@ -166,7 +223,9 @@
         i {
             float: right;
             padding-top: 15px;
+            opacity: 1;
             &:hover {
+                opacity: 0;
                 color: $colour-primary;
             }
         }
@@ -383,4 +442,12 @@
     }
 }
 
+@mixin breakpoint($point) {
+    @if $point == medium {
+        @media screen and(min-width: 601px) {@content;}
+    }
+    @else if $point == large {
+        @media screen and(min-width: 1024px) {@content;}
+    }
+}
     

@@ -1,5 +1,5 @@
-@import 'utils/variables';
-@import 'components/components';
+@import 'utils/_variables';
+@import 'components/_components';
 
 
 * {
@@ -60,15 +60,18 @@ footer {
  @include main-menu();
  @include dropdown-animation();
 }
-@media only screen and (min-width: 601px) {
-    .new-txt {
-        position: relative;
-        left: 81%;
-    }
-    .new-txt {
-        position: relative;
-        left: 81%;
-      }
-  }
+// @media screen and (min-width: 601px) {
+//     .img-box {
+//         justify-content: space-between;
+//         flex-direction: row;
+//         flex-wrap: wrap;
+    
+//         background: greenyellow;
+//     }
+//     .img-positioning {
+//         background: hotpink;
+//         width: 30%;
+//     }
+//   }
   
 
