@@ -69,16 +69,6 @@
         align-items: center;
     }
 
-    a {
-        width: 85%;
-        @include breakpoint(medium) {
-            display: flex;
-            justify-content: center;
-            width: 80%;
-        }
-        
-    }
-
     .button {
         display: flex;
         align-items: center;
@@ -86,23 +76,16 @@
         background: #f2f2f2;
         border-radius: 20px;
         border: 1px solid #fff;
-        width: 100%;
+        width: 80vw;
         height: 70px;
         margin-bottom: 20px;
         box-shadow: $button-shadow;
+        @include breakpoint(medium) {
+           width: 60vw;
+        }
         &:hover {
             background: lighten($colour-primary, 30%);
             box-shadow: $hover-shadow;
-        }
-        .first {
-            @include breakpoint(medium) {
-                float: left;
-            }
-        }
-        .second {
-            @include breakpoint(medium) {
-                float: right;
-            }
         }
     }
         .span-nums {
@@ -121,6 +104,20 @@
         .span-txt {
             padding-left: 20px;
             font-weight: bold;
+        }
+        .section-box__button-box__first {
+            @include breakpoint(medium) {
+                align-self: flex-start;
+                padding-left: 5%;
+            }
+
+        }
+     
+        .section-box__button-box__third {
+            @include breakpoint(medium) {
+                align-self: flex-end;
+                padding-right: 5%;
+            }
         }
 }
 
@@ -340,7 +337,6 @@
             animation-duration: 2s;
         }
         &:hover .tick {
-            // display: initial;
             animation-name: icon-rotate; 
             animation-duration: 2s;
         }
