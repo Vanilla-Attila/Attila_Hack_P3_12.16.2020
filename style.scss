@@ -60,4 +60,5 @@ footer {
 .main-menu {
  @include main-menu();
  @include dropdown-animation();
+ @include menu-btn();
 }
