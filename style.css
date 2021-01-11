@@ -24,6 +24,9 @@
 body {
   font-family: "roboto", sans-serif;
 }
+body a {
+  text-decoration: none;
+}
 
 h1 {
   text-align: center;
@@ -308,6 +311,15 @@ footer i {
 .main-menu .full:hover {
   opacity: 1;
   color: #9356dc;
+}
+@media screen and (min-width: 1024px) {
+  .main-menu .flex-menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.main-menu .flex-menu__group {
+  flex-basis: 30%;
 }
 .main-menu .type-of-dish {
   font-weight: normal;

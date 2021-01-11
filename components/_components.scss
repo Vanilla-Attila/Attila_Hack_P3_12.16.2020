@@ -1,3 +1,12 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@mixin txt-decoration {
+    text-decoration: none;
+}
+
 @mixin button() {
     height: 50px;
     width: 200px;
@@ -310,6 +319,15 @@
             opacity: 1;
             color: $colour-primary;                
         }
+    }
+    .flex-menu {
+        @include breakpoint(large) {
+            display: flex;
+            justify-content: space-around;
+         }
+    }
+    .flex-menu__group {
+        flex-basis: 30%;
     }
     .type-of-dish {
         font-weight: normal;

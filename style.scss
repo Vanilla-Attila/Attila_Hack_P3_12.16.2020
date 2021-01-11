@@ -3,13 +3,14 @@
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+   @include reset();
 }
 
 body {
     font-family: $text-font;
+    a {
+        @include txt-decoration();
+    }
 }
 h1 {
     @include h1();
